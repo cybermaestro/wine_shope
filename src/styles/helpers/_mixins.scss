@@ -1,0 +1,5 @@
+@mixin letters($fam,$f,$c){
+    font-family:$fam;
+    font-size: $f;
+    color: $c;
+}

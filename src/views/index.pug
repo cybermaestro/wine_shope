@@ -1,0 +1,19 @@
+extends layouts/default
+include helpers/mixins
+
+block variables
+	- const title = "wine-shope"
+
+	mixin card(images, text, price)
+		.card__img 
+			img.hours-img(src= images, alt="hours")
+			h3.card__subtitle: a.card-link.link-w(href='#')= text
+			p.price: a.card-link.link-w.text_price(href='#')= price
+
+block content
+			
+
+block scripts
+	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")
+	script(src="js/main.js")
+	script(src="js/vendor.js")

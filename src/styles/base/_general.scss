@@ -1,0 +1,38 @@
+h1, h2, h3, h4, h5, h6, ul {
+    margin: 0;
+    padding: 0;
+}
+//link style start
+.link-g {
+    text-decoration: none;
+    color: #969696;
+    transition-duration: 1s;
+}
+
+.link-g:hover, .link-g:active {
+    color: #ffffff;
+    opacity: 0.8;
+    transition-duration: 1s;
+}
+
+.link-w {
+    text-decoration: none;
+    color: #ffffff;
+    transition-duration: 1s;
+}
+
+.link-w:hover, .link-w:active {
+    opacity: 0.7;
+    color: #1F1F1F;
+    transition-duration: 1s;
+}
+
+//link style end
+
+.container {
+    @include container();
+    @include sm(max-width, rem(510));
+    @include md(max-width, rem(690));
+    @include lg(max-width, rem(930));
+    @include xl(max-width, rem(1110));
+}
