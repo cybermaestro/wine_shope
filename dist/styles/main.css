@@ -10,9 +10,9 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 
-@import url("https://fonts.googleapis.com/css2?family=PT+Sans&display=swap");
-
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
 
 html {
   line-height: 1.15;
@@ -384,13 +384,13 @@ template {
   display: none;
 }
 
-@font-face {
-  font-family: 'Conv_PostNoBillsJaffna-Regular';
-  src: url("../fonts/PostNoBillsJaffna-Regular.eot");
-  src: local("☺"), url("../fonts/PostNoBillsJaffna-Regular.woff") format("woff"), url("../fonts/PostNoBillsJaffna-Regular.ttf") format("truetype"), url("../fonts/PostNoBillsJaffna-Regular.svg") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
+/*@font-face {
+	font-family: 'Conv_PostNoBillsJaffna-Regular';
+	src: url('../fonts/PostNoBillsJaffna-Regular.eot');
+	src: local('☺'), url('../fonts/PostNoBillsJaffna-Regular.woff') format('woff'), url('../fonts/PostNoBillsJaffna-Regular.ttf') format('truetype'), url('../fonts/PostNoBillsJaffna-Regular.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}*/
 
 h1,
 h2,
@@ -429,6 +429,25 @@ ul {
   transition-duration: 1s;
 }
 
+.button {
+  box-sizing: border-box;
+  height: 50px;
+  background: #99862A;
+  text-align: center;
+  padding: 17px 30px;
+  font-family: "Montserrat";
+  font-size: 13px;
+  color: #FFFFFF;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition-duration: 0.5s;
+}
+
+.button:hover {
+  background: #99872ade;
+  transition-duration: 1s;
+}
+
 .container {
   max-width: 1280px;
   margin: 0 auto;
@@ -438,6 +457,70 @@ ul {
 
 .html {
   box-sizing: border-box;
+}
+
+.header {
+  background-image: url(../img/bk_header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 150px;
+}
+
+.header__top {
+  box-sizing: border-box;
+  font-family: "Montserrat";
+  font-size: 13px;
+  color: #FFFFFF;
+  display: flex;
+  justify-content: space-between;
+  padding: 18px 0 14px;
+}
+
+.header__center {
+  opacity: 0.8;
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+  font-family: "Montserrat";
+  font-size: 14px;
+  color: #FFFFFF;
+}
+
+.header__center ul {
+  height: 50px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__center ul .navbar__item {
+  padding-top: 15px;
+  flex-grow: 1;
+  text-align: center;
+  border-right: 1px solid #FFFFFF;
+  transition-duration: 1s;
+}
+
+.header__center ul .navbar__item:last-child {
+  border-right: none;
+}
+
+.header__center ul .navbar__item:hover {
+  background-color: #969696e0;
+  transition-duration: 1s;
+}
+
+.header__button {
+  display: flex;
+  justify-content: center;
+  margin-top: 583px;
+}
+
+.header__button .bouton_left {
+  margin-right: 30px;
+}
+
+.header__button .button_right {
+  margin-left: 30px;
 }
 
 @media screen and (min-width: 36rem) {
@@ -461,6 +544,57 @@ ul {
 @media screen and (min-width: 75rem) {
   .container {
     max-width: 69.375rem;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .header__top {
+    font-family: "Montserrat";
+    font-size: 10px;
+    color: #FFFFFF;
+  }
+
+  .header__center {
+    border-top: none;
+    border-bottom: none;
+  }
+
+  .header__center ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .header__center ul a {
+    display: block;
+  }
+
+  .header__center ul .navbar__item {
+    min-width: 50%;
+    border-right: none;
+    height: 40px;
+    border-bottom: 1px solid #FFFFFF;
+  }
+
+  .header__button {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 200px;
+    height: 120px;
+    justify-content: space-between;
+  }
+
+  .header__button .bouton_left {
+    margin: 0 auto;
+  }
+
+  .header__button .button_right {
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 450px) and (max-width: 780px) {
+  .header__button {
+    margin-top: 270px;
   }
 }
 /*# sourceMappingURL=maps/main.css.map */

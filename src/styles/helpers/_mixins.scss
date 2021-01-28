@@ -3,3 +3,15 @@
     font-size: $f;
     color: $c;
 }
+
+@mixin mobile() {
+    @media screen and (max-width: 450px) {
+      @content;
+    }
+  }
+
+@mixin tablet() {
+    @media screen and (min-width: 450px) and (max-width: 780px) {
+      @content;
+    }
+  }

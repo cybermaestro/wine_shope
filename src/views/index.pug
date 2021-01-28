@@ -11,7 +11,20 @@ block variables
 			p.price: a.card-link.link-w.text_price(href='#')= price
 
 block content
-			
+		header.header
+			.container
+				.header__top
+					p.address Новокузнечный переулок 4/1
+					p.telephone 8 (812) 123-45-67
+				.header__center
+					nav.navbar
+						ul
+							each t in ['Каталог', 'Доставка', 'Коллекции', 'Контакты']
+								a.navbar__item.link-w(href='#')=t
+				.header__button
+					.button.button_left: a.link-w(href='#') винная карта
+					.button.button_right: a.link-w(href='#') дегустация
+
 
 block scripts
 	script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js")

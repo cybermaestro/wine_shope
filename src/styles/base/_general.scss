@@ -27,6 +27,23 @@ h1, h2, h3, h4, h5, h6, ul {
     transition-duration: 1s;
 }
 
+.button {
+    box-sizing: border-box;
+    height: 50px;
+    background: #99862A;
+    text-align: center;
+    padding: 17px 30px;
+    @include letters($M, 13px, #FFFFFF);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition-duration: 0.5s;
+}
+.button:hover {
+    background: #99872ade;
+    transition-duration: 1s;
+}
+
+
 //link style end
 
 .container {
