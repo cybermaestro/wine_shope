@@ -49,8 +49,20 @@ block content
 						img.images_top(src="/img/info_1.jpg", alt='images')
 						img.images_left(src="/img/info_2.jpg", alt='images')
 						img.images_right(src="/img/info_3.jpg", alt='images')
-						
-
+		.recording
+			.container
+				.sheet
+					.sheet_title
+						h3.title Запись на дегустацию
+						.line
+					img.sheet_left(src="/img/top_left.png", alt='imades')
+					img.sheet_right(src="/img/top_right.png", alt='imades')
+					.sheet_text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Feugiat enim tortor in hac id imperdiet adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. 
+					.fields
+						input.fields_left.fields_text(value="Имя", tabindex='1', name='username', type='text')
+						input.fields_right.fields_text(value="Телефон", tabindex="2",name="userphone" type="text")
+						input.fields_center.fields_text(value="Бутик на Невском 103", tabindex="3",name="useraddress" type="text")
+					.recording_button.button: a.link-w(href='#') записаться
 
 
 block scripts

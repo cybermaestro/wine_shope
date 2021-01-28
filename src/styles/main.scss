@@ -364,3 +364,145 @@
 }
 
    //info_card end
+  //recording start
+.recording {
+  background: #282828;
+  padding: 130px 0 100px;
+  @include tablet() {
+    padding: 80px 0 60px;
+   }
+  @include mobile() {
+    padding: 50px 0 40px;
+   }
+}
+
+.sheet {
+  position: relative;
+  padding: 105px 285px 75px;
+  border: 3px solid #C4C4C4;
+  @include comp() {
+    padding: 100px 100px 45px;
+   }
+  @include tablet() {
+    padding: 80px 50px 35px;
+   }
+  @include mobile() {
+    padding: 80px 50px 35px;
+   }
+  .sheet_title {
+    position: absolute;
+    background: #282828;
+    left: 50%;
+    margin-left: -270px;
+    top: -50px;
+    @include letters($PD, 36px, #FFFFFF);
+    padding: 10px 50px;
+    @include tablet() {
+      @include letters($PD, 26px, #FFFFFF);
+      margin-left: -203px;
+     }
+    @include mobile() {
+      @include letters($PD, 16px, #FFFFFF);
+      margin-left: -115px;
+      padding: 10px 20px;
+      top: -30px;
+     }
+  }
+  .sheet_left {
+    position: absolute;
+    left: -130px;
+    top: -130px;
+    @include comp() {
+      display: none;
+     }
+    @include tablet() {
+      display: none;
+     }
+    @include mobile() {
+      display: none;
+     }
+  }
+  .sheet_right {
+    position: absolute;
+    right: -130px;
+    top: -100px;
+    @include comp() {
+      display: none;
+     }
+    @include tablet() {
+      display: none;
+     }
+    @include mobile() {
+      display: none;
+     }
+  }
+  .sheet_text {
+    @include letters($M, 16px, #FFFFFF);
+    line-height: 150%;
+    text-align: center;
+    @include tablet() {
+      @include letters($M, 13px, #FFFFFF);
+     }
+    @include tablet() {
+      @include letters($M, 13px, #FFFFFF);
+     }
+    @include mobile() {
+      @include letters($M, 12px, #FFFFFF);
+     }
+  }
+  .fields {
+    display: flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    margin: 60px 0 30px;
+    @include mobile() {
+      margin: 20px 0 20px;
+     }
+    .fields_left {
+      flex: 0 1 47%;
+      @include mobile() {
+        flex: 0 1 100%;
+       }
+    }
+    .fields_right {
+      flex: 0 1 47%;
+      @include mobile() {
+        flex: 0 1 100%;
+        margin-top: 15px;
+       }
+    }
+    .fields_center {
+      margin-top: 30px;
+      flex: 0 1 100%;
+      @include mobile() {
+        margin-top: 15px;
+       }
+    }
+    .fields_text {
+      @include letters($M, 13px, #FFFFFF);
+      line-height: 150%;
+      background: #282828;
+      text-decoration: none;
+      border: none;
+      border-bottom: 1px solid #FFFFFF; 
+      height: 30px;
+    }
+  }
+  .recording_button {
+    background: #282828;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    line-height: 20px;
+    transition-duration: 0.5s;
+    border: 1px solid #ffffffb7;
+    padding: 15px 0;
+  }
+  .recording_button:hover {
+    transition-duration: 1s;
+    background: #63ad1ca4;
+  }
+}
+
+
+
+   //recording end
