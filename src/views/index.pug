@@ -63,6 +63,21 @@ block content
 						input.fields_right.fields_text(value="Телефон", tabindex="2",name="userphone" type="text")
 						input.fields_center.fields_text(value="Бутик на Невском 103", tabindex="3",name="useraddress" type="text")
 					.recording_button.button: a.link-w(href='#') записаться
+		.footer_box
+			.container
+				.footer
+					.footer__nav
+						each t in ['Главная', 'Каталог', 'Поставщики', 'Коллекции', 'Дегустация', 'Коллекция 2020', 'Контакты']
+								a.navbar__item.link-w(href='#')=t
+					.footer__bottom
+						.text_left.footer_text винный бутик LE CORTE
+						.footer__telephone 8 (812) 123-45-67
+						.soc_icons
+							img(src='/img/svg/youtub.svg', alt='icon')
+							img(src='/img/svg/vk.svg', alt='icon') 
+							img(src='/img/svg/facebook.svg', alt='icon') 
+						.text_right.footer_text © le-corte.ru	
+
 
 
 block scripts

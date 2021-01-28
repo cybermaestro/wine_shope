@@ -503,6 +503,137 @@
   }
 }
 
+//recording end
+//footer start
+.footer_box {
+  background: #998431;
+  padding: 50px 0;
+  @include mobile() {
+    padding: 20px 0;
+   }
+}
+
+.footer {
+  border-top: 1px solid #FFFFFF;
+  border-bottom: 1px solid #FFFFFF;
+}
+
+.footer__nav {
+  box-sizing: border-box;
+  @include letters($M, 14px, #FFFFFF);
+  line-height: 150%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid #FFFFFF;
+  padding: 19px 80px 0;
+  @include comp() {
+    @include letters($M, 11px, #FFFFFF);
+   }
+  @include tablet() {
+    @include letters($M, 14px, #FFFFFF);
+    flex-wrap: wrap;
+    height: 80px;
+    padding: 19px 50px 0;
+   }
+  @include mobile() {
+    @include letters($M, 13px, #FFFFFF);
+    flex-wrap: wrap;
+    height: 110px;
+    padding: 19px 0px 0;
+   }
+  .footer__nav a {
+    display: block;
+    align-items: center
+  }
+}
+
+.footer__bottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 15px;
+  @include mobile() {
+    padding: 0px 0px;
+    flex-wrap:wrap;
+   }
+  .footer_text {
+    @include letters($M, 14px, #FFFFFF);
+    line-height: 150%;
+    text-transform: uppercase;
+    @include comp() {
+      @include letters($M, 11px, #FFFFFF);
+     }
+    @include tablet() {
+      @include letters($M, 10px, #FFFFFF);
+     }
+    @include mobile() {
+      @include letters($M, 10px, #FFFFFF);
+     }
+  }
+  .text_left {
+    border-right: 1px solid #FFFFFF;
+    @include mobile() {
+      order: 3;
+      border-top:  1px solid #FFFFFF;
+     } 
+  }
+  .text_right {
+    border-left: 1px solid #FFFFFF;
+    @include mobile() {
+      order: 4;
+      border: none;
+      border-top:  1px solid #FFFFFF;
+     } 
+  }
+  .footer__telephone {
+    @include letters($M, 14px, #FFFFFF);
+    line-height: 150%;
+    border-right: 1px solid #FFFFFF;
+    @include comp() {
+      @include letters($M, 11px, #FFFFFF);
+     }
+    @include tablet() {
+      @include letters($M, 10px, #FFFFFF);
+     }
+    @include mobile() {
+      @include letters($M, 12px, #FFFFFF);
+      order: 1;
+     } 
+  }
+  .soc_icons {
+    @include mobile() {
+      min-width: 90px;
+      order: 2;
+     }
+  }
+  .soc_icons img{
+    margin-right: 35px;
+    @include comp() {
+      margin-right: 20px;
+     }
+     @include tablet() {
+      margin-right: 10px;
+      margin-top: -8px;
+     } 
+    @include mobile() {
+      margin-right: 10px;
+      margin-top: -6px;
+     }
+  }
+  .soc_icons img:last-child{
+    margin-right: 0px;
+  }
+  .text_left, .footer__telephone, .soc_icons, .text_right {
+    box-sizing: border-box;
+    flex-grow: 1;
+    text-align: center;
+    height: 60px;
+    padding-top: 20px;
+    @include mobile() {
+      flex: 0 1 50%;
+     }
+  }
+}
 
 
-   //recording end
+//footer end
