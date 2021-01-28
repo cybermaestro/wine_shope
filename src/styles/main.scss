@@ -134,6 +134,11 @@
     .card__title {
       @include letters($PD, 19px, #FFFFFF);
       text-align: center;
+      .title {
+        @include mobile() {
+          line-height: 120%;
+        }
+      }
       @include comp() {
         @include letters($PD, 14px, #FFFFFF);
       }
@@ -150,15 +155,15 @@
       text-align: center;
       margin: 40px 187px 50px 190px;
       @include comp() {
-        @include letters($PD, 12px, #FFFFFF);
+        @include letters($M, 12px, #FFFFFF);
         margin: 40px 137px 50px 140px;
       }
       @include tablet() {
-        @include letters($PD, 12px, #FFFFFF);
+        @include letters($M, 12px, #FFFFFF);
         margin: 30px 60px 30px 60px;
       }
       @include mobile() {
-        @include letters($PD, 10px, #FFFFFF);
+        @include letters($M, 8px, #FFFFFF);
         margin: 20px 40px 20px 40px;
       }
     }
@@ -171,15 +176,191 @@
 
   .title_name {
     line-height: 150%; 
-    .line {
-      width: 160px;
-      height: 1px;
-      background-color: #FFFFFF;
-      margin: 0 auto;
-      margin-top: 50px;
+  }
+  .line {
+    width: 160px;
+    height: 1px;
+    background-color: #FFFFFF;
+    margin: 0 auto;
+    margin-top: 50px;
+    @include mobile() {
+      margin-top: 20px;
+    }
+  }
+  //business_card end
+  //info_card start
+  .info_card {
+    background: #E6E3C4;
+    padding: 80px 0;
+    @include tablet() {
+      padding: 40px 0;
+     }
+    @include mobile() {
+      padding: 20px 0;
+     } 
+  }
+
+  .info {
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #998431;
+    border-bottom: 1px solid #998431;
+    padding: 60px 0;
+    @include tablet() {
+      display: block;
+      padding: 20px 0;
+     }
+    @include mobile() {
+      display: block;
+      padding: 10px 0;
+     }
+  }
+
+  .harvest {
+    flex-basis: 40%;
+    @include comp() {
+      flex-basis: 100%;
+     }
+    .subtitle {
+      @include letters($M, 16px, #000000);
       @include mobile() {
-        margin-top: 20px;
+        @include letters($M, 12px, #000000);
+       } 
+    }
+
+    .info_title {
+      margin-top: 30px;
+      @include letters($PD, 36px, #000000);
+      line-height: 150%;
+      @include tablet() {
+        margin-top: 15px;
+       }
+      @include mobile() {
+        margin-top: 10px;
+        @include letters($PD, 24px, #000000);
+       }  
+    }
+    .line {
+      background: #282828;
+      margin: 30px 0 30px 0;
+    }
+    .info_text {
+      @include letters($M, 14px, #282828);
+      line-height: 150%;
+      @include mobile() {
+        @include letters($M, 10px, #282828);
+       } 
+    }
+    table {
+      margin: 30px 0;
+      max-width: 100%;
+      border-collapse: collapse; 
+      .post-1 {
+        @include letters($M, 14px, #282828);
+        padding: 10px 24px;
+        border-right: 1px solid #282828;
+        @include mobile() {
+          padding: 0px 12px;
+         } 
       }
+      .post-2  {
+        padding: 0px 30px;
+        @include mobile() {
+          padding: 0px 10px;
+         }
+      }
+      .post_title {
+        @include letters($PD, 18px, #282828);
+        line-height: 80%;
+        font-weight: 900;
+        margin-top: 10px;
+        @include mobile() {
+          @include letters($PD, 12px, #282828);
+         }
+      }
+      .post_text {
+        @include letters($M, 14px, #282828);
+        line-height: 150%;
+        @include mobile() {
+          @include letters($M, 10px, #282828);
+         }
+      }
+      tr  {
+        border-bottom: 1px solid #282828;
+      }
+      tr:last-child {
+        border-bottom: none;
+      }
+    }
+    .info_button {
+      margin-top: 30px;
+      max-width: 254px;
+
+    }
   }
+
+  .images {
+    flex-basis: 48%;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    @include comp() {
+      flex-basis: 30%;
+     }
+     @include tablet() {
+      margin-top: 20px;
+     }
+     @include mobile() {
+      margin-top: 20px;
+     }
+    .images_top {
+      margin-bottom: 30px;
+      @include comp() {
+       max-width: 100%;
+       margin-bottom: 15px;
+      }
+      @include tablet() {
+        width: 100%;
+       }
+      @include mobile() {
+        width: 100%;
+       }
+    }
+     .images_right {
+      margin-bottom: 30px;
+      @include comp() {
+       max-width: 100%;
+       margin-bottom: 0;
+       margin-top: 15px;
+      }
+      @include tablet() {
+        width: 50%;
+       }
+      @include mobile() {
+        width: 100%;
+       } 
   }
-   //business_card end
+  .images_left {
+    margin-bottom: 30px;
+    @include comp() {
+      margin-bottom: 0px;
+     }
+     @include tablet() {
+      width: 50%;
+     }
+    @include mobile() {
+      width: 100%;
+     } 
+  } 
+}
+.images img {
+  transition-duration: 1s;
+}
+
+.images img:hover {
+  -webkit-filter: blur(3px);
+  filter: blur(3px);
+  transition-duration: 2s;
+}
+
+   //info_card end
