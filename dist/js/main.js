@@ -225,15 +225,6 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_provided_window_dot_$ = jquery__WEBPACK_IMPORTED_MODULE_2__["$"];
 __webpack_provided_window_dot_jQuery = jquery__WEBPACK_IMPORTED_MODULE_2__["jQuery"];
-Object(jquery__WEBPACK_IMPORTED_MODULE_2__["$"])(document).ready(function () {
-  Object(jquery__WEBPACK_IMPORTED_MODULE_2__["$"])(".menu-burger__header").click(function () {
-    Object(jquery__WEBPACK_IMPORTED_MODULE_2__["$"])(".menu-burger__header").toggleClass("open-menu");
-    Object(jquery__WEBPACK_IMPORTED_MODULE_2__["$"])(".header__nav").toggleClass("open-menu");
-  });
-});
-Object(jquery__WEBPACK_IMPORTED_MODULE_2__["$"])(document).ready(function () {
-  Object(jquery__WEBPACK_IMPORTED_MODULE_2__["$"])(".product__row").slick();
-});
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
