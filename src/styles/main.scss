@@ -10,6 +10,58 @@
 .html {
     box-sizing: border-box;
   }
+  .time {
+    background-color: #282828;
+  }
+  .step {
+    display: flex;
+    justify-content: space-between;
+    animation-name: fadeit;
+    animation-duration: 1s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+    padding: 0 30px;
+    @include mobile() {
+      padding: 0 ;
+    }
+    @include tablet() {
+      padding: 0 ;
+    }
+    &__moskow {
+      display: flex;
+    }
+    &__london {
+      display: flex;
+    }
+    &__icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+      margin-top: 20px;
+      @include mobile() {
+        margin-right: 5px;
+        margin-top: 12px;
+      }
+    }
+    &__city {
+      @include letters($PD, 18px, #e2e2e2);
+      font-weight: 800;
+      display: flex;
+      @include mobile() {
+        @include letters($PD, 14px, #e2e2e2);
+      }
+    }
+    &__city span {
+      margin-left: 15px;
+      border-bottom: 2px solid #99862A;
+      @include mobile() {
+        margin-left: 10px;
+      }
+      @include tablet() {
+        margin-left: 10px;
+      }
+    }
+  } 
 //header start
 .header {
   background-image: url(../img/bk_header.jpg);
@@ -579,36 +631,33 @@
         order: 3;
         border-top:  1px solid #FFFFFF;
        } 
+    } 
+    &__right {
+      border-left: 1px solid #FFFFFF;
+      @include mobile() {
+        order: 4;
+        border: none;
+        border-top:  1px solid #FFFFFF;
+       } 
+    } 
+    &__telephone {
+      @include letters($M, 14px, #FFFFFF);
+      line-height: 150%;
+      border-right: 1px solid #FFFFFF;
+      @include comp() {
+        @include letters($M, 11px, #FFFFFF);
+       }
+      @include tablet() {
+        @include letters($M, 10px, #FFFFFF);
+       }
+      @include mobile() {
+        @include letters($M, 12px, #FFFFFF);
+        order: 1;
+       } 
     }  
 }
 
 
-
-  
-  
-  .footer__right {
-    border-left: 1px solid #FFFFFF;
-    @include mobile() {
-      order: 4;
-      border: none;
-      border-top:  1px solid #FFFFFF;
-     } 
-  }
-  .footer__telephone {
-    @include letters($M, 14px, #FFFFFF);
-    line-height: 150%;
-    border-right: 1px solid #FFFFFF;
-    @include comp() {
-      @include letters($M, 11px, #FFFFFF);
-     }
-    @include tablet() {
-      @include letters($M, 10px, #FFFFFF);
-     }
-    @include mobile() {
-      @include letters($M, 12px, #FFFFFF);
-      order: 1;
-     } 
-  }
   .soc-icons {
     @include mobile() {
       min-width: 90px;

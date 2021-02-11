@@ -459,6 +459,48 @@ ul {
   box-sizing: border-box;
 }
 
+.time {
+  background-color: #282828;
+}
+
+.step {
+  display: flex;
+  justify-content: space-between;
+  animation-name: fadeit;
+  animation-duration: 1s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+  padding: 0 30px;
+}
+
+.step__moskow {
+  display: flex;
+}
+
+.step__london {
+  display: flex;
+}
+
+.step__icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+
+.step__city {
+  font-family: "Playfair Display";
+  font-size: 18px;
+  color: #e2e2e2;
+  font-weight: 800;
+  display: flex;
+}
+
+.step__city span {
+  margin-left: 15px;
+  border-bottom: 2px solid #99862A;
+}
+
 .header {
   background-image: url(../img/bk_header.jpg);
   background-position: center;
@@ -878,6 +920,25 @@ ul {
 }
 
 @media screen and (max-width: 470px) {
+  .step {
+    padding: 0;
+  }
+
+  .step__icon {
+    margin-right: 5px;
+    margin-top: 12px;
+  }
+
+  .step__city {
+    font-family: "Playfair Display";
+    font-size: 14px;
+    color: #e2e2e2;
+  }
+
+  .step__city span {
+    margin-left: 10px;
+  }
+
   .header__top {
     font-family: "Montserrat";
     font-size: 10px;
@@ -1123,6 +1184,14 @@ ul {
 }
 
 @media screen and (min-width: 470px) and (max-width: 780px) {
+  .step {
+    padding: 0;
+  }
+
+  .step__city span {
+    margin-left: 10px;
+  }
+
   .header__button {
     margin-top: 270px;
   }

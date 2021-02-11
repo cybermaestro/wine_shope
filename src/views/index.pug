@@ -13,7 +13,19 @@ block variables
 	include ../../node_modules/bempug/index
 	- BEMPUG.modifier = '_';
 	- BEMPUG.element = '__';
+
 block content
+		+b( 'time' )
+			+b( 'container', {p:0} )
+				+b( 'step' )
+					+e( 'moskow' )
+						+e( 'icon', {t: 'img'} )(src="/img/svg/clock.png", alt='imades')
+						+e( 'city', {t: 'p'} ) Moskow:
+							span#tik-tak_m
+					+e( 'london' )
+						+e( 'icon', {t: 'img'} )(src="/img/svg/clock.png", alt='imades')
+						+e( 'city', {t: 'p'} ) London:
+							span#tik-tak_l
 		+b( 'header', {t: 'header'} )
 			+b( 'container', {p:0} )
 				+e( 'top' )

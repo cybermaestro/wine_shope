@@ -225,6 +225,20 @@ __webpack_require__.r(__webpack_exports__);
 
 __webpack_provided_window_dot_$ = jquery__WEBPACK_IMPORTED_MODULE_2__["$"];
 __webpack_provided_window_dot_jQuery = jquery__WEBPACK_IMPORTED_MODULE_2__["jQuery"];
+var moskowUtc = 3;
+var timerId = setInterval(function () {
+  var t = new Date(),
+      tt = t.getUTCHours() + moskowUtc;
+  document.getElementById('tik-tak_m').innerHTML = (tt > 24 ? "0" : "") + (tt > 24 ? tt - 24 : tt) + ":" + (t.getMinutes() < 10 ? '0' : '') + t.getMinutes() + ":" + (t.getSeconds() < 10 ? '0' : '') + t.getSeconds();
+  document.getElementById('tik-tak_m').classList.add("step");
+}, 1000);
+var londonUtc = 0;
+var timerId = setInterval(function () {
+  var t = new Date(),
+      tt = t.getUTCHours() + londonUtc;
+  document.getElementById('tik-tak_l').innerHTML = (tt > 24 ? "0" : "") + (tt > 24 ? tt - 24 : tt) + ":" + (t.getMinutes() < 10 ? '0' : '') + t.getMinutes() + ":" + (t.getSeconds() < 10 ? '0' : '') + t.getSeconds();
+  document.getElementById('tik-tak_l').classList.add("step");
+}, 1000);
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js"), __webpack_require__(/*! jquery */ "./node_modules/jquery/dist/jquery.js")))
 
 /***/ })
